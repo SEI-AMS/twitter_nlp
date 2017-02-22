@@ -1,2 +1,6 @@
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:`pwd`/../../lib
-c++ -I. -static -L../../lib cap_classify.cpp -o cap_classify -ltinysvm
+if [ "$(uname)" == "Darwin" ]; then
+    c++ -o cap_classify cap_classify.cpp -ltinysvm
+else
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:`pwd`/../../lib
+    c++ -I. -static -L../../lib cap_classify.cpp -o cap_classify -ltinysvm
+fi

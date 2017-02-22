@@ -111,7 +111,8 @@ Indicates that the word "The" begins a named entity of type movie, "Town" contin
 
 Requirements:
 -------------
-1. Linux
+1. Linux or MacOS
+2. For MacOS, install TinySVM via Brew first: `brew install tinysvm`
 2. Libraries and executables can be compiled with build.sh
 
 Relevant papers:
